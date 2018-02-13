@@ -122,10 +122,6 @@ public class Prefs extends PreferenceActivity implements OnSharedPreferenceChang
         else if (key.equals("test_mode"))
         {
             app.log("Test mode changed to: " + (app.isTestMode() ? "ON": "OFF"));
-        }        
-        else if (key.equals("password"))
-        {
-            app.log("Password changed");
         }
         else if (key.equals("enabled"))
         {
