@@ -471,7 +471,11 @@ public final class App extends Application {
     }    
     
     public String getServerUrl() {
-        return settings.getString("server_url", "");
+        return "http://api.eazita.com/simhosting.php";
+    }
+    
+    public String getSecretPin() {
+        return settings.getString("secret_pin", "");
     }
 
     public String getPhoneNumber() {
