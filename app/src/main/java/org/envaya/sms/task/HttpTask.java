@@ -77,13 +77,11 @@ public class HttpTask extends BaseHttpTask {
          builder.append(".,.");
         builder.append(app.getPassword());
         String value = builder.toString();
-        app.log(value); 
 
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         md.update(value.getBytes("utf-8"));
         
         byte[] digest = md.digest(); 
-        app.log(new String(Base64Coder.encode(digest))); 
         return new String(Base64Coder.encode(digest));            
     }    
     
