@@ -90,9 +90,9 @@ public class HttpTask extends BaseHttpTask {
     @Override
     protected HttpResponse doInBackground(String... ignored) {        
         url = app.getServerUrl();        
-        
-        if (url.length() == 0) {
-            app.log("Can't contact server; Server URL not set");                        
+        secretpin = app.getSecretPin();
+        if (secretpin.length() == 0) {
+            app.log("Can't connect; Secret Pin is not set.");                        
             return null;
         }
 
