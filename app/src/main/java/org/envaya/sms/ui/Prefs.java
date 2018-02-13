@@ -105,17 +105,9 @@ public class Prefs extends PreferenceActivity implements OnSharedPreferenceChang
             Settings.System.putInt(getContentResolver(), 
                 Settings.System.WIFI_SLEEP_POLICY, value);
         }
-        else if (key.equals("server_url"))
+        else if (key.equals("secret_pin"))
         {
-            String serverUrl = sharedPreferences.getString("server_url", "");
-            
-            // assume http:// scheme if none entered
-            if (serverUrl.length() > 0 && !serverUrl.contains("://"))
-            {
-                sharedPreferences.edit()
-                    .putString("server_url", "http://" + serverUrl)
-                    .commit();
-            }
+            String serverUrl = sharedPreferences.getString("secret_pin", "");
             
             app.log("Server URL changed to: " + app.getDisplayString(app.getServerUrl()));
         }
