@@ -87,7 +87,7 @@ public class HttpTask extends BaseHttpTask {
     
     @Override
     protected HttpResponse doInBackground(String... ignored) {        
-        url = app.getServerUrl();        
+        url = app.getServerUrl();
         secretpin = app.getSecretPin();
         if (secretpin.length() == 0) {
             app.log("Can't connect; Secret Pin is not set.");                        
@@ -97,8 +97,7 @@ public class HttpTask extends BaseHttpTask {
         logEntries = app.getNewLogEntries();        
         
         params.add(new BasicNameValuePair("phone_number", app.getPhoneNumber()));
-        params.add(new BasicNameValuePair("secret_pin", app.getSecretPin()));
-        params.add(new BasicNameValuePair("phone_token", app.getPhoneToken()));
+        params.add(new BasicNameValuePair("secret_pin", "" + app.getSecretPin()));
         params.add(new BasicNameValuePair("send_limit", "" + app.getOutgoingMessageLimit()));
         params.add(new BasicNameValuePair("now", "" + System.currentTimeMillis()));
         params.add(new BasicNameValuePair("settings_version", "" + app.getSettingsVersion()));
