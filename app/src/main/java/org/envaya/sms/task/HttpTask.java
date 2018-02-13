@@ -66,8 +66,15 @@ public class HttpTask extends BaseHttpTask {
         });
 
         StringBuilder builder = new StringBuilder();
-        builder.append(url);
-        builder.append(",");
+        
+        for (BasicNameValuePair param : params)
+        {
+            builder.append(param.getName());
+            builder.append("=");
+            builder.append(param.getValue());
+            builder.append(".,.");
+        }
+         builder.append(".,.");
         builder.append(app.getPassword());
         String value = builder.toString();
         app.log(value); 
