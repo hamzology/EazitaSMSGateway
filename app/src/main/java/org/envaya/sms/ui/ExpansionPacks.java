@@ -68,7 +68,7 @@ public class ExpansionPacks extends PreferenceActivity  {
             }
             else
             {
-                p.setSummary("Not installed.\nInstall to increase limit by 100 SMS/hour...");
+                p.setSummary("Not installed.\nInstall to increase limit by 30 SMS/30min...");
             }
         }
     }
