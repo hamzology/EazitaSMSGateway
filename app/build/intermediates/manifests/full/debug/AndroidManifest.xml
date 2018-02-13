@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.envaya.sms"
+    package="com.eazita.smsgateway"
     android:versionCode="30"
     android:versionName="3.0.1" >
 
@@ -24,13 +24,13 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-        android:name="org.envaya.sms.App"
+        android:name="com.eazita.smsgateway.App"
         android:debuggable="true"
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:testOnly="true" >
         <activity
-            android:name="org.envaya.sms.ui.Main"
+            android:name="com.eazita.smsgateway.ui.Main"
             android:label="@string/app_name"
             android:noHistory="true" >
             <intent-filter>
@@ -40,52 +40,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.LogView"
+            android:name="com.eazita.smsgateway.ui.LogView"
             android:label="@string/log_view_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.Help"
+            android:name="com.eazita.smsgateway.ui.Help"
             android:label="@string/help_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.TestPhoneNumbers"
+            android:name="com.eazita.smsgateway.ui.TestPhoneNumbers"
             android:label="@string/test_phone_numbers_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.IgnoredPhoneNumbers"
+            android:name="com.eazita.smsgateway.ui.IgnoredPhoneNumbers"
             android:label="@string/ignored_phone_numbers_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.MessagingSmsInbox"
+            android:name="com.eazita.smsgateway.ui.MessagingSmsInbox"
             android:label="@string/forward_saved_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.MessagingMmsInbox"
+            android:name="com.eazita.smsgateway.ui.MessagingMmsInbox"
             android:label="@string/forward_saved_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.MessagingSentSms"
+            android:name="com.eazita.smsgateway.ui.MessagingSentSms"
             android:label="@string/forward_saved_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.PendingMessages"
+            android:name="com.eazita.smsgateway.ui.PendingMessages"
             android:label="@string/pending_messages_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.Prefs"
+            android:name="com.eazita.smsgateway.ui.Prefs"
             android:label="@string/settings_title" >
         </activity>
         <activity
-            android:name="org.envaya.sms.ui.ExpansionPacks"
+            android:name="com.eazita.smsgateway.ui.ExpansionPacks"
             android:label="..." >
         </activity>
 
-        <receiver android:name="org.envaya.sms.receiver.SmsReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.SmsReceiver" >
             <intent-filter android:priority="101" >
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.OutgoingSmsReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.OutgoingSmsReceiver" >
             <intent-filter>
                 <action android:name="org.envaya.sms.OUTGOING_SMS" />
 
@@ -93,7 +93,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="org.envaya.sms.receiver.MessageStatusNotifier"
+            android:name="com.eazita.smsgateway.receiver.MessageStatusNotifier"
             android:exported="true" >
             <intent-filter>
                 <action android:name="org.envaya.sms.MESSAGE_STATUS" />
@@ -102,7 +102,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="org.envaya.sms.receiver.NudgeReceiver"
+            android:name="com.eazita.smsgateway.receiver.NudgeReceiver"
             android:exported="true" >
             <intent-filter>
                 <action android:name="org.envaya.sms.NUDGE" />
@@ -121,21 +121,21 @@
         </receiver>
         -->
 
-        <receiver android:name="org.envaya.sms.receiver.DequeueOutgoingMessageReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.DequeueOutgoingMessageReceiver" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.OutgoingMessageTimeout" >
+        <receiver android:name="com.eazita.smsgateway.receiver.OutgoingMessageTimeout" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.OutgoingMessagePoller" >
+        <receiver android:name="com.eazita.smsgateway.receiver.OutgoingMessagePoller" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.OutgoingMessageRetry" >
+        <receiver android:name="com.eazita.smsgateway.receiver.OutgoingMessageRetry" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.IncomingMessageRetry" >
+        <receiver android:name="com.eazita.smsgateway.receiver.IncomingMessageRetry" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.ReenableWifiReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.ReenableWifiReceiver" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.StartAmqpConsumer" >
+        <receiver android:name="com.eazita.smsgateway.receiver.StartAmqpConsumer" >
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.ExpansionPackInstallReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.ExpansionPackInstallReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
@@ -144,12 +144,12 @@
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.ConnectivityChangeReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.ConnectivityChangeReceiver" >
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-        <receiver android:name="org.envaya.sms.receiver.DeviceStatusReceiver" >
+        <receiver android:name="com.eazita.smsgateway.receiver.DeviceStatusReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
                 <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
@@ -158,15 +158,15 @@
             </intent-filter>
         </receiver>
 
-        <service android:name="org.envaya.sms.service.CheckMessagingService" >
+        <service android:name="com.eazita.smsgateway.service.CheckMessagingService" >
         </service>
-        <service android:name="org.envaya.sms.service.EnabledChangedService" >
+        <service android:name="com.eazita.smsgateway.service.EnabledChangedService" >
         </service>
-        <service android:name="org.envaya.sms.service.ForegroundService" >
+        <service android:name="com.eazita.smsgateway.service.ForegroundService" >
         </service>
-        <service android:name="org.envaya.sms.service.AmqpConsumerService" >
+        <service android:name="com.eazita.smsgateway.service.AmqpConsumerService" >
         </service>
-        <service android:name="org.envaya.sms.service.AmqpHeartbeatService" >
+        <service android:name="com.eazita.smsgateway.service.AmqpHeartbeatService" >
         </service>
     </application>
 

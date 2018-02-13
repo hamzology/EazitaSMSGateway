@@ -1,7 +1,0 @@
-#Internal package file, do not edit.
-#Tue Feb 13 13:45:59 PKT 2018
-0.baseType=DIRECTORY
-0.base=/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/transforms/dexMerger/debug/0
-0.path=classes.dex
-0.set=DEX
-count=1

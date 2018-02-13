@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.envaya.sms.test">
+    package="com.eazita.smsgateway.test">
 
     <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="org.envaya.sms"
+                     android:targetPackage="com.eazita.smsgateway"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for org.envaya.sms"/>
+                     android:label="Tests for com.eazita.smsgateway"/>
 </manifest>
