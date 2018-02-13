@@ -1,0 +1,331 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:1-161:12
+	package
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:3:7-31
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:5:7-34
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:4:7-31
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+	android:targetSdkVersion
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:5-43
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:7:15-40
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+		INJECTED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:11:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:13:5-75
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:13:22-72
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:14:5-70
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:14:22-67
+uses-permission#android.permission.RECEIVE_MMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:15:5-70
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:15:22-67
+uses-permission#android.permission.SEND_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:16:5-67
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:16:22-64
+uses-permission#android.permission.READ_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:17:5-67
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:17:22-64
+uses-permission#android.permission.WRITE_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:18:5-68
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:18:22-65
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:19:22-65
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:20:5-81
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:20:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:21:22-64
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:22:5-73
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:22:22-70
+application
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:24:5-160:19
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:25:39-71
+	android:icon
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:25:9-38
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:24:18-51
+activity#org.envaya.sms.ui.Main
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:26:9-31:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:26:57-89
+	android:noHistory
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:26:90-114
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:26:19-56
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:28:17-69
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:29:27-74
+activity#org.envaya.sms.ui.LogView
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:33:9-34:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:33:60-98
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:33:19-59
+activity#org.envaya.sms.ui.Help
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:36:9-37:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:36:57-91
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:36:19-56
+activity#org.envaya.sms.ui.TestPhoneNumbers
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:39:9-40:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:39:69-117
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:39:19-68
+activity#org.envaya.sms.ui.IgnoredPhoneNumbers
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:42:9-43:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:42:72-123
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:42:19-71
+activity#org.envaya.sms.ui.MessagingSmsInbox
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:45:9-46:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:45:70-113
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:45:19-69
+activity#org.envaya.sms.ui.MessagingMmsInbox
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:48:9-49:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:48:70-113
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:48:19-69
+activity#org.envaya.sms.ui.MessagingSentSms
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:51:9-52:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:51:69-112
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:51:19-68
+activity#org.envaya.sms.ui.PendingMessages
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:54:9-55:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:54:68-114
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:54:19-67
+activity#org.envaya.sms.ui.Prefs
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:57:9-58:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:57:58-96
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:57:19-57
+activity#org.envaya.sms.ui.ExpansionPacks
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:60:9-61:20
+	android:label
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:60:67-86
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:60:19-66
+receiver#org.envaya.sms.receiver.SmsReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:63:9-67:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:63:19-69
+intent-filter#android.provider.Telephony.SMS_RECEIVED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:64:13-66:29
+	android:priority
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:64:28-50
+action#android.provider.Telephony.SMS_RECEIVED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:65:17-82
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:65:25-79
+receiver#org.envaya.sms.receiver.OutgoingSmsReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:69:9-74:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:69:19-77
+intent-filter#org.envaya.sms.OUTGOING_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:70:13-73:29
+action#org.envaya.sms.OUTGOING_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:17-70
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:25-67
+data
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:72:17-50
+	android:scheme
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:72:23-47
+receiver#org.envaya.sms.receiver.MessageStatusNotifier
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:76:9-81:20
+	android:exported
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:76:80-103
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:76:19-79
+intent-filter#org.envaya.sms.MESSAGE_STATUS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:77:13-80:29
+action#org.envaya.sms.MESSAGE_STATUS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:17-72
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:25-69
+receiver#org.envaya.sms.receiver.NudgeReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:9-88:20
+	android:exported
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:72-95
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:19-71
+intent-filter#android.intent.action.BOOT_COMPLETED+org.envaya.sms.NUDGE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:84:13-87:29
+action#org.envaya.sms.NUDGE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:17-63
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:25-60
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:86:17-79
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:86:25-76
+receiver#org.envaya.sms.receiver.DequeueOutgoingMessageReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:101:9-102:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:101:19-88
+receiver#org.envaya.sms.receiver.OutgoingMessageTimeout
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:104:9-105:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:104:19-80
+receiver#org.envaya.sms.receiver.OutgoingMessagePoller
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:107:9-108:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:107:19-79
+receiver#org.envaya.sms.receiver.OutgoingMessageRetry
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:110:9-111:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:110:19-78
+receiver#org.envaya.sms.receiver.IncomingMessageRetry
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:113:9-114:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:113:19-78
+receiver#org.envaya.sms.receiver.ReenableWifiReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:116:9-117:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:116:19-78
+receiver#org.envaya.sms.receiver.StartAmqpConsumer
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:119:9-120:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:119:19-75
+receiver#org.envaya.sms.receiver.ExpansionPackInstallReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:122:9-129:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:122:19-86
+intent-filter#android.intent.action.PACKAGE_ADDED+android.intent.action.PACKAGE_REMOVED+android.intent.action.PACKAGE_REPLACED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:123:13-128:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:124:18-79
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:124:26-76
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:125:18-81
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:125:26-78
+action#android.intent.action.PACKAGE_REPLACED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:126:18-82
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:126:26-79
+receiver#org.envaya.sms.receiver.ConnectivityChangeReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:131:9-135:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:131:19-84
+intent-filter#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:132:13-134:29
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:133:17-79
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:133:25-76
+receiver#org.envaya.sms.receiver.DeviceStatusReceiver
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:137:9-144:20
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:137:19-78
+intent-filter#android.intent.action.ACTION_POWER_CONNECTED+android.intent.action.ACTION_POWER_DISCONNECTED+android.intent.action.BATTERY_LOW+android.intent.action.BATTERY_OKAY
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:138:13-143:29
+action#android.intent.action.ACTION_POWER_CONNECTED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:139:17-87
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:139:25-84
+action#android.intent.action.ACTION_POWER_DISCONNECTED
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:140:17-90
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:140:25-87
+action#android.intent.action.BATTERY_LOW
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:141:17-76
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:141:25-73
+action#android.intent.action.BATTERY_OKAY
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:142:17-77
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:142:25-74
+service#org.envaya.sms.service.CheckMessagingService
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:146:9-147:19
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:146:18-77
+service#org.envaya.sms.service.EnabledChangedService
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:149:9-150:19
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:149:18-77
+service#org.envaya.sms.service.ForegroundService
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:152:9-153:19
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:152:18-73
+service#org.envaya.sms.service.AmqpConsumerService
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:155:9-156:19
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:155:18-75
+service#org.envaya.sms.service.AmqpHeartbeatService
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:158:9-159:19
+	android:name
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:158:18-76

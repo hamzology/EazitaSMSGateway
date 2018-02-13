@@ -1,0 +1,80 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master
+                  -                                   
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* .gitmodules
+* CONTRIBUTORS
+* LICENSE
+* NOTICE
+* README
+* ant.properties
+* build.properties
+* build.xml
+* default.properties
+* export.properties
+* icons_license.txt
+* proguard-project.txt
+* proguard.cfg
+* server/
+* server/php/
+* server/php/EnvayaSMS.php
+* server/php/README.txt
+* server/php/example/
+* server/php/example/config.php
+* server/php/example/log/
+* server/php/example/log/.gitignore
+* server/php/example/mms_parts/
+* server/php/example/mms_parts/.gitignore
+* server/php/example/outgoing_sms/
+* server/php/example/outgoing_sms/.gitignore
+* server/php/example/send_sms.php
+* server/php/example/send_sms_amqp.php
+* server/php/example/server.php
+* server/php/example/www/
+* server/php/example/www/gateway.php
+* server/php/example/www/gateway_amqp.php
+* server/php/example/www/test.html
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* libs/commons-cli-1.1.jar => app/libs/commons-cli-1.1.jar
+* libs/commons-io-1.2.jar => app/libs/commons-io-1.2.jar
+* libs/httpmime-4.1.2.jar => app/libs/httpmime-4.1.2.jar
+* libs/rabbitmq-client.jar => app/libs/rabbitmq-client.jar
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
