@@ -13,8 +13,8 @@
     <PreferenceCategory android:title="Server Settings">      
       
     <EditTextPreference 
-            android:key="server_url" 
-            android:title="Server URL" 
+            android:key="secret_pin" 
+            android:title="Secret Pin" 
             android:inputType="textUri"
             android:defaultValue=""
     ></EditTextPreference>
