@@ -406,12 +406,13 @@ public final class App extends Application {
         if (!pollActive)
         {
             String serverUrl = getServerUrl();
-            if (serverUrl.length() > 0) {
+            String secretpin = getSecretPin();
+            if (secretpin.length() > 0) {
                 log("Checking for messages");
                 pollActive = true;                
                 new PollerTask(this).execute();
             } else {
-                log("Can't check messages; server URL not set");
+                log("Can't connect; Secret Pin is not set.");
             }
         }
         else
