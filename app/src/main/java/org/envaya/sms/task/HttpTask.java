@@ -67,17 +67,10 @@ public class HttpTask extends BaseHttpTask {
 
         StringBuilder builder = new StringBuilder();
         builder.append(url);
-        for (BasicNameValuePair param : params)
-        {
-            builder.append(",");
-            builder.append(param.getName());
-            builder.append("=");
-            builder.append(param.getValue());                
-        }
         builder.append(",");
         builder.append(app.getPassword());
-
         String value = builder.toString();
+        app.log(value); 
 
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         md.update(value.getBytes("utf-8"));
