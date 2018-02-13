@@ -1,4 +1,4 @@
-#Tue Feb 13 12:59:05 PKT 2018
-base.0=/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/build/intermediates/transforms/dexMerger/debug/0
+#Tue Feb 13 19:22:33 PKT 2018
+base.0=/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
