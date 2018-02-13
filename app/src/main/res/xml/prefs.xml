@@ -14,7 +14,7 @@
       
     <EditTextPreference 
             android:key="secret_pin" 
-            android:title="Secret Pin" 
+            android:title="Secret pin" 
             android:inputType="textUri"
             android:defaultValue=""
     ></EditTextPreference>
@@ -24,12 +24,6 @@
             android:title="Your phone number" 
             android:inputType="phone"
             android:defaultValue=""
-    ></EditTextPreference>
-
-    <EditTextPreference 
-            android:key="password" 
-            android:title="Password" 
-            android:password="true"
     ></EditTextPreference>
     
     <ListPreference
