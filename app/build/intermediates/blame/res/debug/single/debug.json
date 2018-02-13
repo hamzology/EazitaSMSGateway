@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_add_phone_number.xml.flat",
-        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/add_phone_number.xml"
+        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_ignored_phone_numbers.xml.flat",
+        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/ignored_phone_numbers.xml"
     },
     {
         "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_dialog.png.flat",
         "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/drawable-ldpi/ic_menu_dialog.png"
     },
     {
-        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_ignored_phone_numbers.xml.flat",
-        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/ignored_phone_numbers.xml"
+        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_add_phone_number.xml.flat",
+        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/add_phone_number.xml"
     },
     {
         "merged": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/build/intermediates/res/merged/debug/layout_add_phone_number.xml.flat",
@@ -36,16 +36,16 @@
         "source": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/src/main/res/drawable-ldpi/ic_menu_puzzle.png"
     },
     {
-        "merged": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_tick.png.flat",
-        "source": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/src/main/res/drawable-ldpi/ic_menu_tick.png"
+        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_phone_number.xml.flat",
+        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/phone_number.xml"
     },
     {
         "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_magnet.png.flat",
         "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/drawable-ldpi/ic_menu_magnet.png"
     },
     {
-        "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/layout_phone_number.xml.flat",
-        "source": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/res/layout/phone_number.xml"
+        "merged": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_menu_tick.png.flat",
+        "source": "/media/hamza/Local Disk/Projects/apps/EnvayaSMS-master/app/src/main/res/drawable-ldpi/ic_menu_tick.png"
     },
     {
         "merged": "/media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_menu_link.png.flat",

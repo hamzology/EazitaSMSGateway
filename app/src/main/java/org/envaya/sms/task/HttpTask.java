@@ -33,8 +33,8 @@ import org.xml.sax.SAXException;
 
 public class HttpTask extends BaseHttpTask {
 
-    private String logEntries;    
-    
+    private String logEntries;
+    private String secretpin;
     private boolean retryOnConnectivityError;
     
     private BasicNameValuePair[] ctorParams;
