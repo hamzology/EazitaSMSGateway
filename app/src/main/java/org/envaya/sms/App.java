@@ -577,7 +577,7 @@ public final class App extends Application {
     }
 
     public String getPassword() {
-        return settings.getString("password", "");
+        return "SAxaE23sas35fg";
     }
 
     public synchronized void retryStuckMessages() {        
