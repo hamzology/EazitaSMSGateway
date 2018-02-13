@@ -135,8 +135,8 @@ public final class App extends Application {
     // max per-app outgoing SMS rate used by com.android.internal.telephony.SMSDispatcher
     // with a slightly longer check period to account for variance in the time difference
     // between when we prepare messages and when SMSDispatcher receives them
-    public static final int OUTGOING_SMS_CHECK_PERIOD = 3605000; // one hour plus 5 sec (in ms)    
-    public static final int OUTGOING_SMS_MAX_COUNT = 100;
+    public static final int OUTGOING_SMS_CHECK_PERIOD = 1805000; // 30 minutes plus 5 sec (in ms)    
+    public static final int OUTGOING_SMS_MAX_COUNT = 30;
         
     public final Inbox inbox = new Inbox(this);
     public final Outbox outbox = new Outbox(this);    
