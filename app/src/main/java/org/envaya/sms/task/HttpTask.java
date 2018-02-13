@@ -81,9 +81,9 @@ public class HttpTask extends BaseHttpTask {
 
         MessageDigest md = MessageDigest.getInstance("SHA-1");
         md.update(value.getBytes("utf-8"));
-
+        
         byte[] digest = md.digest(); 
-
+        app.log(new String(Base64Coder.encode(digest))); 
         return new String(Base64Coder.encode(digest));            
     }    
     
