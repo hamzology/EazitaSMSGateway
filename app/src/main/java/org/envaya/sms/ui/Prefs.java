@@ -107,7 +107,7 @@ public class Prefs extends PreferenceActivity implements OnSharedPreferenceChang
         }
         else if (key.equals("secret_pin"))
         {
-            String serverUrl = sharedPreferences.getString("secret_pin", "");
+            String serverUrl = app.getServerUrl();
             
             app.log("Secret Pin changed to: " + app.getDisplayString(app.getSecretPin()));
         }
