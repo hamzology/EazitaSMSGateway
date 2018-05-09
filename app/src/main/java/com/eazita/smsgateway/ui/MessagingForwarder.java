@@ -40,9 +40,9 @@ public abstract class MessagingForwarder extends ListActivity {
         setContentView(R.layout.inbox);
         
         final String[] inboxTypeClasses = new String[] {
-                "org.envaya.sms.ui.MessagingSmsInbox", 
-                "org.envaya.sms.ui.MessagingMmsInbox",
-                "org.envaya.sms.ui.MessagingSentSms",
+                "com.eazita.smsgateway.ui.MessagingSmsInbox",
+                "com.eazita.smsgateway.ui.MessagingMmsInbox",
+                "com.eazita.smsgateway.ui.MessagingSentSms",
         };
         
         final String[] inboxTypeNames = new String[] {
