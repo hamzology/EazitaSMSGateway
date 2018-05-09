@@ -80,9 +80,10 @@ public class OutgoingSms extends OutgoingMessage {
         }        
 
         Intent intent = new Intent(schedule.packageName + App.OUTGOING_SMS_INTENT_SUFFIX, this.getUri());
-        intent.putExtra(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
+        intent.putExtra(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, true);
         intent.putExtra(App.OUTGOING_SMS_EXTRA_TO, getTo());
         intent.putExtra(App.OUTGOING_SMS_EXTRA_BODY, bodyParts);
+        intent.putExtra(App.OUTGOING_SMS_EXTRA_SERVERID, getServerId());
         
         app.sendBroadcast(intent, "android.permission.SEND_SMS");        
     }    
