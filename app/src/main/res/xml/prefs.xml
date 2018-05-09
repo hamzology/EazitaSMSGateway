@@ -23,7 +23,7 @@
             android:key="phone_number" 
             android:title="Your phone number" 
             android:inputType="phone"
-            android:defaultValue=""
+            android:defaultValue="+92"
     ></EditTextPreference>
     
     <ListPreference
