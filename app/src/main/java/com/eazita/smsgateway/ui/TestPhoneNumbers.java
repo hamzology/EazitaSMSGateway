@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.eazita.smsgateway.App;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 public class TestPhoneNumbers extends ListActivity {
     

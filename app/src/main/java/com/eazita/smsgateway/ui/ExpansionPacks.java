@@ -10,7 +10,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceScreen;
 import android.view.Menu;
 import com.eazita.smsgateway.App;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 public class ExpansionPacks extends PreferenceActivity  {
     

@@ -26,7 +26,7 @@ import android.util.Log;
 
 import com.eazita.smsgateway.ui.Main;
 import com.eazita.smsgateway.App;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

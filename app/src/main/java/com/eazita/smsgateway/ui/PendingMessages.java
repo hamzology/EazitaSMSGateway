@@ -35,7 +35,7 @@ import java.util.List;
 import com.eazita.smsgateway.App;
 import com.eazita.smsgateway.IncomingMessage;
 
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 
 public class PendingMessages extends ListActivity {

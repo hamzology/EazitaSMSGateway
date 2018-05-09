@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.eazita.smsgateway.IncomingSms;
 import com.eazita.smsgateway.IncomingMessage;
 
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

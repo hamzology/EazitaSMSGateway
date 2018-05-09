@@ -23,7 +23,7 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 import org.w3c.dom.Document;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 public class BaseHttpTask extends AsyncTask<String, Void, HttpResponse> {
        

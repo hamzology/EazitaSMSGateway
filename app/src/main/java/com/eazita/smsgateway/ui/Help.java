@@ -10,7 +10,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 import com.eazita.smsgateway.App;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 public class Help extends Activity {
 

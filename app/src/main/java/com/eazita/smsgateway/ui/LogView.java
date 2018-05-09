@@ -22,7 +22,7 @@ import android.widget.TextView;
 import org.apache.http.HttpResponse;
 import org.apache.http.message.BasicNameValuePair;
 import com.eazita.smsgateway.App;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 import java.util.List;
 

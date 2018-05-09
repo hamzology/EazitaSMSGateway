@@ -15,7 +15,7 @@ import android.view.Menu;
 
 import com.eazita.smsgateway.App;
 
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 
 public class Prefs extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 

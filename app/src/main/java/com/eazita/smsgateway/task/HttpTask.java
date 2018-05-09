@@ -211,7 +211,7 @@ public class HttpTask extends BaseHttpTask {
         }
         else
         {
-            app.logError("Unexpected error while contacting server", ex, true);           
+            app.logError("Unexpected error while contacting server", ex, true);
         }        
     }    
     

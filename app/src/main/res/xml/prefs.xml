@@ -4,7 +4,7 @@
       
     <CheckBoxPreference
             android:key="enabled" 
-            android:title="Enable EnvayaSMS" 
+            android:title="Enable EZSMS"
             android:defaultValue='false'
             android:summaryOn="New messages will be forwarded between phone and server"
             android:summaryOff="New messages will not be forwarded between phone and server"
@@ -48,8 +48,8 @@
     <CheckBoxPreference
             android:key="call_notifications"
             android:title="Call notifications"
-            android:summaryOff="EnvayaSMS will not notify server when phone receives an incoming call"
-            android:summaryOn="EnvayaSMS will notify server when phone receives an incoming call"
+            android:summaryOff="EZSMS will not notify server when phone receives an incoming call"
+            android:summaryOn="EZSMS will notify server when phone receives an incoming call"
     ></CheckBoxPreference>    
         
     <PreferenceScreen 
@@ -59,8 +59,8 @@
     >
         <intent 
             android:action="android.intent.action.MAIN"
-            android:targetPackage="org.envaya.sms"
-            android:targetClass="org.envaya.sms.ui.ExpansionPacks" /> 
+            android:targetPackage="com.eazita.smsgateway"
+            android:targetClass="com.eazita.smsgateway.ui.ExpansionPacks" />
     </PreferenceScreen>               
         
     <CheckBoxPreference
@@ -73,31 +73,31 @@
     <PreferenceScreen 
         android:key="ignored_numbers" 
         android:title="Ignored phones"
-        android:summary="Configure the phone numbers that EnvayaSMS will ignore"
+        android:summary="Configure the phone numbers that EZSMS will ignore"
     >        
        <intent 
             android:action="android.intent.action.MAIN"
-            android:targetPackage="org.envaya.sms"
-            android:targetClass="org.envaya.sms.ui.IgnoredPhoneNumbers" />
+            android:targetPackage="com.eazita.smsgateway"
+            android:targetClass="com.eazita.smsgateway.ui.IgnoredPhoneNumbers" />
     </PreferenceScreen>
     
     <CheckBoxPreference
             android:key="test_mode"
             android:title="Test mode"
-            android:summaryOff="Test mode is off (EnvayaSMS forwards all SMS)"
-            android:summaryOn="Test mode is on (EnvayaSMS only forwards SMS to/from specific phones)"
+            android:summaryOff="Test mode is off (EZSMS forwards all SMS)"
+            android:summaryOn="Test mode is on (EZSMS only forwards SMS to/from specific phones)"
     ></CheckBoxPreference>
     
     <PreferenceScreen 
         android:key="test_numbers" 
         android:title="Sender phones"
         android:dependency="test_mode"
-        android:summary="Configure the phone numbers that EnvayaSMS will handle"
+        android:summary="Configure the phone numbers that EZSMS will handle"
     >
        <intent 
             android:action="android.intent.action.MAIN"
-            android:targetPackage="org.envaya.sms"
-            android:targetClass="org.envaya.sms.ui.TestPhoneNumbers" />
+            android:targetPackage="com.eazita.smsgateway"
+            android:targetClass="com.eazita.smsgateway.ui.TestPhoneNumbers" />
     </PreferenceScreen>        
     
     </PreferenceCategory>   
@@ -199,12 +199,12 @@
     <PreferenceCategory android:title="Help">
     <PreferenceScreen 
             android:key="help" 
-            android:title="About EnvayaSMS"
+            android:title="About Eazita"
         >
        <intent 
             android:action="android.intent.action.MAIN"
-            android:targetPackage="org.envaya.sms"
-            android:targetClass="org.envaya.sms.ui.Help" />
+            android:targetPackage="com.eazita.smsgateway"
+            android:targetClass="com.eazita.smsgateway.ui.Help" />
     </PreferenceScreen>
     </PreferenceCategory>
 

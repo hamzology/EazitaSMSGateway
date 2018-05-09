@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;

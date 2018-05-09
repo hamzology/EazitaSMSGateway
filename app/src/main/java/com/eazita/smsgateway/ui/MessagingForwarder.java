@@ -18,7 +18,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import com.eazita.smsgateway.IncomingMessage;
 import com.eazita.smsgateway.App;
 
-import org.envaya.sms.R;
+import com.eazita.smsgateway.R;
 import java.util.Arrays;
 
 
