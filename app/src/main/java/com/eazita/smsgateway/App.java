@@ -82,7 +82,7 @@ public final class App extends Application {
     public static final String MESSAGE_TYPE_SMS = "sms";
     public static final String MESSAGE_TYPE_CALL = "call";
     
-    public static final String LOG_NAME = "EnvayaSMS";
+    public static final String LOG_NAME = "EZSMS";
     
     // intent to signal to Main activity (if open) that log has changed
     public static final String LOG_CHANGED_INTENT = "org.envaya.sms.LOG_CHANGED";

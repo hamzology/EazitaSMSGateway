@@ -193,12 +193,12 @@ receiver#com.eazita.smsgateway.receiver.OutgoingSmsReceiver
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:69:9-74:20
 	android:name
 		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:69:19-84
-intent-filter#org.envaya.sms.OUTGOING_SMS
+intent-filter#com.eazita.smsgateway.OUTGOING_SMS
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:70:13-73:29
-action#org.envaya.sms.OUTGOING_SMS
-ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:17-70
+action#com.eazita.smsgateway.OUTGOING_SMS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:17-77
 	android:name
-		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:25-67
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:71:25-74
 data
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:72:17-50
 	android:scheme
@@ -209,24 +209,24 @@ ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/A
 		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:76:87-110
 	android:name
 		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:76:19-86
-intent-filter#org.envaya.sms.MESSAGE_STATUS
+intent-filter#com.eazita.smsgateway.MESSAGE_STATUS
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:77:13-80:29
-action#org.envaya.sms.MESSAGE_STATUS
-ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:17-72
+action#com.eazita.smsgateway.MESSAGE_STATUS
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:17-79
 	android:name
-		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:25-69
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:78:25-76
 receiver#com.eazita.smsgateway.receiver.NudgeReceiver
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:9-88:20
 	android:exported
 		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:79-102
 	android:name
 		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:83:19-78
-intent-filter#android.intent.action.BOOT_COMPLETED+org.envaya.sms.NUDGE
+intent-filter#android.intent.action.BOOT_COMPLETED+com.eazita.smsgateway.NUDGE
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:84:13-87:29
-action#org.envaya.sms.NUDGE
-ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:17-63
+action#com.eazita.smsgateway.NUDGE
+ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:17-70
 	android:name
-		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:25-60
+		ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:85:25-67
 action#android.intent.action.BOOT_COMPLETED
 ADDED from /media/hamza/Local Disk/Projects/apps/EazitaSMSGateway/app/src/main/AndroidManifest.xml:86:17-79
 	android:name

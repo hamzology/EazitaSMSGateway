@@ -9,15 +9,15 @@ public class OutgoingSms extends OutgoingMessage {
     public OutgoingSms(App app)
     {
         super(app);
-    }    
-    
+    }
+
     public String getMessageType()
     {
         return App.MESSAGE_TYPE_SMS;
     }
 
     private ArrayList<String> _bodyParts;
-    
+
     public ArrayList<String> getBodyParts()
     {
         if (_bodyParts == null)
@@ -27,67 +27,67 @@ public class OutgoingSms extends OutgoingMessage {
         }
         return _bodyParts;
     }
-    
+
     public int getNumParts()
     {
-        return getBodyParts().size();        
+        return getBodyParts().size();
     }
-    
+
     public class ScheduleInfo extends OutgoingMessage.ScheduleInfo
     {
         public String packageName;
     }
-        
+
     public OutgoingMessage.ScheduleInfo scheduleSend()
-    {        
+    {
         ScheduleInfo schedule = new ScheduleInfo();
-        
+
         int numParts = getNumParts();
-        String packageName = app.chooseOutgoingSmsPackage(numParts);            
+        String packageName = app.chooseOutgoingSmsPackage(numParts);
 
         if (packageName == null)
-        {            
-            schedule.time = app.getNextValidOutgoingTime(numParts);                
+        {
+            schedule.time = app.getNextValidOutgoingTime(numParts);
             schedule.now = false;
-        }                
+        }
         else
         {
             schedule.now = true;
             schedule.packageName = packageName;
         }
-        
+
         return schedule;
     }
-    
+
     public void send(OutgoingMessage.ScheduleInfo _schedule)
     {
         ScheduleInfo schedule = (ScheduleInfo)_schedule;
-        
+
         if (numRetries == 0)
         {
             app.log("Sending " + getDisplayType());
         }
         else
-        {        
+        {
             app.log("Retrying sending " + getDescription());
         }
-                
+
         ArrayList<String> bodyParts = getBodyParts();
         int numParts = bodyParts.size();
         if (numParts > 1)
         {
             app.log("(Multipart message with "+numParts+" parts)");
-        }        
+        }
 
         Intent intent = new Intent(schedule.packageName + App.OUTGOING_SMS_INTENT_SUFFIX, this.getUri());
-        intent.putExtra(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, true);
+        intent.putExtra(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
         intent.putExtra(App.OUTGOING_SMS_EXTRA_TO, getTo());
         intent.putExtra(App.OUTGOING_SMS_EXTRA_BODY, bodyParts);
-        intent.putExtra(App.OUTGOING_SMS_EXTRA_SERVERID, getServerId());
-        
-        app.sendBroadcast(intent, "android.permission.SEND_SMS");        
-    }    
-    
+
+
+        app.sendBroadcast(intent, "android.permission.SEND_SMS");
+    }
+
     public String getDisplayType()
     {
         return "SMS";
@@ -95,15 +95,15 @@ public class OutgoingSms extends OutgoingMessage {
 
     @Override
     public void validate() throws ValidationException
-    {                        
+    {
         super.validate();
-                
+
         String to = getTo();
         if (to == null || to.length() == 0)
         {
             throw new ValidationException("Destination address is empty");
-        }                        
-        
+        }
+
         if (!app.isForwardablePhoneNumber(to))
         {
             if (app.isTestMode() && app.autoAddTestNumber())
@@ -117,14 +117,14 @@ public class OutgoingSms extends OutgoingMessage {
                 throw new ValidationException("Destination address is not allowed");
             }
         }
-        
+
         String messageBody = getMessageBody();
-        
+
         if (messageBody == null || messageBody.length() == 0)
         {
             throw new ValidationException("Message body is empty");
-        }        
-        
+        }
+
         int numParts = getNumParts();
 
         if (numParts > App.OUTGOING_SMS_MAX_COUNT)

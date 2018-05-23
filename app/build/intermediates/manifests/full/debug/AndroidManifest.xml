@@ -27,7 +27,8 @@
         android:name="com.eazita.smsgateway.App"
         android:debuggable="true"
         android:icon="@drawable/icon"
-        android:label="@string/app_name" >
+        android:label="@string/app_name"
+        android:testOnly="true" >
         <activity
             android:name="com.eazita.smsgateway.ui.Main"
             android:label="@string/app_name"
@@ -86,7 +87,7 @@
         </receiver>
         <receiver android:name="com.eazita.smsgateway.receiver.OutgoingSmsReceiver" >
             <intent-filter>
-                <action android:name="org.envaya.sms.OUTGOING_SMS" />
+                <action android:name="com.eazita.smsgateway.OUTGOING_SMS" />
 
                 <data android:scheme="content" />
             </intent-filter>
@@ -95,7 +96,7 @@
             android:name="com.eazita.smsgateway.receiver.MessageStatusNotifier"
             android:exported="true" >
             <intent-filter>
-                <action android:name="org.envaya.sms.MESSAGE_STATUS" />
+                <action android:name="com.eazita.smsgateway.MESSAGE_STATUS" />
 
                 <data android:scheme="content" />
             </intent-filter>
@@ -104,7 +105,7 @@
             android:name="com.eazita.smsgateway.receiver.NudgeReceiver"
             android:exported="true" >
             <intent-filter>
-                <action android:name="org.envaya.sms.NUDGE" />
+                <action android:name="com.eazita.smsgateway.NUDGE" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

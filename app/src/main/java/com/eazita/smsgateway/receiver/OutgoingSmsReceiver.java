@@ -19,7 +19,6 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
 
         Bundle extras = intent.getExtras();
         String to = extras.getString(App.OUTGOING_SMS_EXTRA_TO);
-        String serverId = extras.getString(App.OUTGOING_SMS_EXTRA_SERVERID);
         ArrayList<String> bodyParts = extras.getStringArrayList(App.OUTGOING_SMS_EXTRA_BODY);
         boolean deliveryReport = extras.getBoolean(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
         
@@ -52,7 +51,6 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
                 Intent deliveryIntent = new Intent(App.MESSAGE_DELIVERY_INTENT, intent.getData());
                 deliveryIntent.putExtra(App.STATUS_EXTRA_INDEX, i);
                 deliveryIntent.putExtra(App.STATUS_EXTRA_NUM_PARTS, numParts);
-                deliveryIntent.putExtra(App.STATUS_EXTRA_SERVER_ID, serverId);
 
                 deliveryIntents.add(PendingIntent.getBroadcast(
                     context,
