@@ -284,7 +284,7 @@ public final class App extends Application {
         }
         
         log("Can't send outgoing SMS: maximum limit of "
-            + getOutgoingMessageLimit() + " in 1 hour reached");
+            + getOutgoingMessageLimit() + " in 30 minute reached");
         log("To increase this limit, install an expansion pack.");
                 
         HttpTask task = new HttpTask(this, 

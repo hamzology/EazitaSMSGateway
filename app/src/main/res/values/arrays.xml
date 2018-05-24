@@ -10,7 +10,11 @@
         <item>5 minutes</item>
         <item>10 minutes</item>
         <item>30 minutes</item>
-        <item>1 hour</item>        
+        <item>1 hour</item>
+        <item>3 hour</item>
+        <item>5 hour</item>
+        <item>8 hour</item>
+        <item>10 hour</item>
         <item>never</item>        
     </string-array>
     
@@ -23,7 +27,11 @@
         <item>300</item>
         <item>600</item>
         <item>1800</item>
-        <item>3600</item>        
+        <item>3600</item>
+        <item>10800</item>
+        <item>18000</item>
+        <item>28800</item>
+        <item>36000</item>
         <item>0</item>        
     </string-array>
     
