@@ -23,16 +23,6 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-        android:key="pack02"
-        android:title="SMS Expansion Pack 2"
-        android:summary="...">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="market://details?id=com.eazita.smsgateway.pack02"
-            />
-    </PreferenceScreen>
-
-    <PreferenceScreen
         android:key="pack03"
         android:title="SMS Expansion Pack 3"
         android:summary="...">
@@ -59,6 +49,16 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:data="market://details?id=com.eazita.smsgateway.pack05"
+            />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="pack05"
+        android:title="SMS Expansion Pack 6"
+        android:summary="...">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="market://details?id=com.eazita.smsgateway.pack06"
             />
     </PreferenceScreen>
 
