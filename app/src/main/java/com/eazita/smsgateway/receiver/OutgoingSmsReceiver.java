@@ -58,7 +58,7 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
                     deliveryIntent,
                     PendingIntent.FLAG_ONE_SHOT));                   
             }
-        }        
+        }
 
         smgr.sendMultipartTextMessage(to, null, bodyParts, sentIntents, deliveryIntents);
     }
