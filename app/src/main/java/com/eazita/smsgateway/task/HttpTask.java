@@ -95,9 +95,10 @@ public class HttpTask extends BaseHttpTask {
             return null;
         }
 
-        logEntries = app.getNewLogEntries();        
+        logEntries = app.getNewLogEntries();
         
         params.add(new BasicNameValuePair("phone_number", app.getPhoneNumber()));
+        params.add(new BasicNameValuePair("phone_number1", app.getPhoneNumbersec()));
         params.add(new BasicNameValuePair("secret_pin", "" + app.getSecretPin()));
         params.add(new BasicNameValuePair("send_limit", "" + app.getOutgoingMessageLimit()));
         params.add(new BasicNameValuePair("now", "" + System.currentTimeMillis()));

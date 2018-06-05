@@ -27,7 +27,7 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
         ArrayList<String> bodyParts = extras.getStringArrayList(App.OUTGOING_SMS_EXTRA_BODY);
         boolean deliveryReport = extras.getBoolean(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
         
-        SmsManager smgr = SmsManager.getDefault();
+        //SmsManager smgr = SmsManager.getDefault();
         
         ArrayList<PendingIntent> sentIntents = new ArrayList<PendingIntent>();
         ArrayList<PendingIntent> deliveryIntents = null;
