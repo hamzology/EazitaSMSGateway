@@ -61,15 +61,6 @@ public class OutgoingSms extends OutgoingMessage {
 
     public void send(OutgoingMessage.ScheduleInfo _schedule)
     {
-        String simselect=app.getSIM();
-        if(simselect.equals("2")){
-            simselect=App.LAST_SIM;
-            if(simselect.equals("0")) {
-                App.LAST_SIM = "1";
-            }else{
-                App.LAST_SIM = "0";
-            }
-        }
         ScheduleInfo schedule = (ScheduleInfo)_schedule;
 
         if (numRetries == 0)
@@ -91,7 +82,7 @@ public class OutgoingSms extends OutgoingMessage {
         Intent intent = new Intent(schedule.packageName + App.OUTGOING_SMS_INTENT_SUFFIX, this.getUri());
         intent.putExtra(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
         intent.putExtra(App.OUTGOING_SMS_EXTRA_TO, getTo());
-        intent.putExtra(App.OUTGOING_SMS_EXTRA_SIM, simselect);
+        intent.putExtra(App.OUTGOING_SMS_EXTRA_SIM, getsimId());
         intent.putExtra(App.OUTGOING_SMS_EXTRA_BODY, bodyParts);
 
 

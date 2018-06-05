@@ -88,6 +88,7 @@ public class Outbox {
 
             HttpTask task = new HttpTask(app,
                 new BasicNameValuePair("id", serverId),
+                    new BasicNameValuePair("sent_from", sms.getFrom()),
                 new BasicNameValuePair("status", status),
                 new BasicNameValuePair("error", errorMessage),
                 new BasicNameValuePair("action", App.ACTION_SEND_STATUS)                    

@@ -21,10 +21,17 @@
 
     <EditTextPreference 
             android:key="phone_number" 
-            android:title="Your phone number" 
+            android:title="SIM 0 phone number"
             android:inputType="phone"
             android:defaultValue=""
     ></EditTextPreference>
+
+        <EditTextPreference
+            android:key="phone_number1"
+            android:title="SIM 1 phone number"
+            android:inputType="phone"
+            android:defaultValue=""
+            ></EditTextPreference>
     
     <ListPreference
             android:key="outgoing_interval" 

@@ -13,7 +13,8 @@ import com.eazita.smsgateway.receiver.OutgoingMessageTimeout;
 
 public abstract class OutgoingMessage extends QueuedMessage {
     
-    private String serverId;    
+    private String serverId;
+    private String simId;
     private String message;
     private String from;
     private String to;     
@@ -95,7 +96,17 @@ public abstract class OutgoingMessage extends QueuedMessage {
     public void setServerId(String id)
     {
         this.serverId = id;
-    }    
+    }
+
+    public String getsimId()
+    {
+        return simId;
+    }
+
+    public void setsimId(String id)
+    {
+        this.simId = id;
+    }
            
     public String getMessageBody()
     {

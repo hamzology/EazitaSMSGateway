@@ -168,8 +168,6 @@ public class JsonUtils {
                 OutgoingMessage message = OutgoingMessage.newFromMessageType(app, 
                         optString(messageObject, "type", App.MESSAGE_TYPE_SMS));
 
-                message.setFrom(app.getPhoneNumber());
-                                
                 String to = optString(messageObject, "to", defaultTo);
                 
                 if (to == null || "".equals(to) || "null".equals(to))
@@ -177,10 +175,26 @@ public class JsonUtils {
                     app.log("Received invalid SMS from server (missing recipient)");
                     continue;
                 }
-                
+
+
+                String simselect=app.getSIM();
+                if(simselect.equals("2")){
+                    simselect=App.LAST_SIM;
+                    if(simselect.equals("0")) {
+                        App.LAST_SIM = "1";
+                    }else{
+                        App.LAST_SIM = "0";
+                    }
+                }
+                if(simselect.equals("0")) {
+                    message.setFrom(app.getPhoneNumber());
+                }else{
+                    message.setFrom(app.getPhoneNumbersec());
+                }
                 String body = optString(messageObject, "message","");
                 
                 message.setTo(to);
+                message.setsimId(simselect);
                 message.setServerId(optString(messageObject, "id", null));            
                 message.setPriority(messageObject.optInt("priority", 0));            
                 message.setMessageBody(body);

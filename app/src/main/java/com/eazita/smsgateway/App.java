@@ -513,7 +513,11 @@ public final class App extends Application {
     public String getPhoneNumber() {
         return settings.getString("phone_number", "");
     }
-    
+
+    public String getPhoneNumbersec() {
+        return settings.getString("phone_number1", "");
+    }
+
     public boolean isAmqpEnabled()
     {
         return tryGetBooleanSetting("amqp_enabled", false);
