@@ -61,9 +61,19 @@
             android:action="android.intent.action.MAIN"
             android:targetPackage="com.eazita.smsgateway"
             android:targetClass="com.eazita.smsgateway.ui.ExpansionPacks" />
-    </PreferenceScreen>               
-        
-    <CheckBoxPreference
+    </PreferenceScreen>
+
+
+        <ListPreference
+            android:key="sim_select_policy"
+            android:title="SIM select policy"
+            android:defaultValue="0"
+            android:entries="@array/sim_select_policy"
+            android:entryValues="@array/sim_select_policy_values"
+            >
+        </ListPreference>
+
+        <CheckBoxPreference
             android:key="forward_sent"
             android:title="Forward sent messages"
             android:summaryOff="SMS sent from Messaging app will not be forwarded to server"

@@ -40,10 +40,22 @@
         <item>stay connected when plugged in</item>
         <item>always stay connected</item>
     </string-array>
-    
+
     <string-array name="wifi_sleep_policies_values">
         <item>screen</item>
         <item>plugged</item>
         <item>never</item>
+    </string-array>
+
+    <string-array name="sim_select_policy">
+        <item>Both</item>
+        <item>SIM 0</item>
+        <item>SIM 1</item>
+    </string-array>
+    
+    <string-array name="sim_select_policy_values">
+        <item>2</item>
+        <item>0</item>
+        <item>1</item>
     </string-array>    
 </resources>

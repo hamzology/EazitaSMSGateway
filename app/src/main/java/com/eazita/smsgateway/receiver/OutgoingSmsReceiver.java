@@ -1,6 +1,8 @@
 package com.eazita.smsgateway.receiver;
 
 import com.eazita.smsgateway.App;
+import com.eazita.smsgateway.SimUtil;
+
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -15,10 +17,13 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) 
     {
-        Toast.makeText(context, context.getPackageName() + " received SMS request", Toast.LENGTH_SHORT).show();
 
         Bundle extras = intent.getExtras();
         String to = extras.getString(App.OUTGOING_SMS_EXTRA_TO);
+        String smssim = intent.getStringExtra(App.OUTGOING_SMS_EXTRA_SIM);
+
+        Toast.makeText(context, context.getPackageName() + " received SMS request on sim "+smssim, Toast.LENGTH_SHORT).show();
+
         ArrayList<String> bodyParts = extras.getStringArrayList(App.OUTGOING_SMS_EXTRA_BODY);
         boolean deliveryReport = extras.getBoolean(App.OUTGOING_SMS_EXTRA_DELIVERY_REPORT, false);
         
@@ -60,6 +65,7 @@ public class OutgoingSmsReceiver extends BroadcastReceiver {
             }
         }
 
-        smgr.sendMultipartTextMessage(to, null, bodyParts, sentIntents, deliveryIntents);
+        SimUtil.sendMultipartTextSMS(context, Integer.parseInt(smssim), to, null, bodyParts, sentIntents, deliveryIntents);
+        //smgr.sendMultipartTextMessage(to, null, bodyParts, sentIntents, deliveryIntents);
     }
 }

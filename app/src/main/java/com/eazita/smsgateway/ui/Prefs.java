@@ -107,6 +107,17 @@ public class Prefs extends PreferenceActivity implements OnSharedPreferenceChang
             Settings.System.putInt(getContentResolver(), 
                 Settings.System.WIFI_SLEEP_POLICY, value);
         }
+        else if (key.equals("sim_select_policy"))
+        {
+            String gsim=app.getSIM();
+            String simname;
+            if(gsim.equals("2")){
+                simname=App.getSIMInfo(this).get(0).getDisplay_name()+", "+App.getSIMInfo(this).get(1).getDisplay_name();
+            }else {
+                simname=App.getSIMInfo(this).get(Integer.parseInt(gsim)).getDisplay_name();
+            }
+            app.log("SIM changed to: " + simname);
+        }
         else if (key.equals("secret_pin"))
         {
             String serverUrl = app.getServerUrl();
@@ -170,7 +181,12 @@ public class Prefs extends PreferenceActivity implements OnSharedPreferenceChang
                     p.setSummary("Wi-Fi will stay connected when the phone sleeps");
                     break;
             }
-        }    
+        }
+        else if ("sim_select_policy".equals(key))
+        {
+            p.setSummary("SET SIM policy");
+
+        }
         else if ("send_limit".equals(key))
         {
             int limit = app.getOutgoingMessageLimit();

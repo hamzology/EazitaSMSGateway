@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -83,7 +84,8 @@ public final class App extends Application {
     public static final String MESSAGE_TYPE_CALL = "call";
     
     public static final String LOG_NAME = "EZSMS";
-    
+    public static String LAST_SIM = "0";
+
     // intent to signal to Main activity (if open) that log has changed
     public static final String LOG_CHANGED_INTENT = "com.eazita.smsgateway.LOG_CHANGED";
     public static final String SETTINGS_CHANGED_INTENT = "com.eazita.smsgateway.SETTINGS_CHANGED";
@@ -100,6 +102,7 @@ public final class App extends Application {
     // Interface for sending outgoing messages to expansion packs
     public static final String OUTGOING_SMS_INTENT_SUFFIX = ".OUTGOING_SMS";    
     public static final String OUTGOING_SMS_EXTRA_TO = "to";
+    public static final String OUTGOING_SMS_EXTRA_SIM = "smssim";
     public static final String OUTGOING_SMS_EXTRA_BODY = "body";
     public static final String OUTGOING_SMS_EXTRA_SERVERID = "serverid";
     public static final String OUTGOING_SMS_EXTRA_DELIVERY_REPORT = "delivery";
@@ -158,7 +161,7 @@ public final class App extends Application {
     // list of package names (e.g. org.envaya.sms, or org.envaya.sms.packXX)
     // for this package and all expansion packs
     private List<String> outgoingMessagePackages = new ArrayList<String>();
-                
+
     // map of package name => sorted list of timestamps of outgoing messages
     private HashMap<String, ArrayList<Long>> outgoingTimestamps
             = new HashMap<String, ArrayList<Long>>();
@@ -213,8 +216,28 @@ public final class App extends Application {
         
         updateExpansionPacks();
         configuredChanged();        
-    }   
-    
+    }
+
+    public static List<SimInfo> getSIMInfo(Context context){
+        List<SimInfo> simInfoList = new ArrayList();
+        Uri URI_TELEPHONY = Uri.parse("content://telephony/siminfo/");
+        Cursor c = context.getContentResolver().query(URI_TELEPHONY, null, null, null, null);
+        if (c.moveToFirst()){
+            do {
+                int id = c.getInt(c.getColumnIndex("_id"));
+                int slot = c.getInt(c.getColumnIndex("slot"));
+                String display_name = c.getString(c.getColumnIndex("display_name"));
+                String icc_id = c.getString(c.getColumnIndex("icc_id"));
+                SimInfo simInfo = new SimInfo(id, display_name, icc_id, slot);
+                Log.d("apipas_sim_info", simInfo.toString());
+                simInfoList.add(simInfo);
+            } while (c.moveToNext());
+        }
+        c.close();
+
+        return simInfoList;
+    }
+
     public void configuredChanged()
     {
         if (isConfigured())
@@ -356,7 +379,7 @@ public final class App extends Application {
         
         if (prevLimit != newLimit)
         {        
-            log("Outgoing SMS rate limit: " + newLimit + " messages/hour");
+            log("Outgoing SMS rate limit: " + newLimit + " messages/30min");
         }
         sendBroadcast(new Intent(App.EXPANSION_PACKS_CHANGED_INTENT));
     }
@@ -478,7 +501,11 @@ public final class App extends Application {
     public String getServerUrl() {
         return "http://api.eazita.com/simhosting.php";
     }
-    
+
+    public String getSIM() {
+        return settings.getString("sim_select_policy", "");
+    }
+
     public String getSecretPin() {
         return settings.getString("secret_pin", "");
     }
