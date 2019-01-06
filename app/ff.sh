@@ -17,12 +17,11 @@ if [ "$codecn" == "h264" ] then
     width=${streams_stream_0_width};
     height=${streams_stream_0_height};
     bitrate=$((${format_bit_rate}/1000));
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?bitrate=$bitrate
 else
-    
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?noh=$codecn
 fi
 
-
-curl -i http://api.eazita.com/ezsms/parameterssaver.php?width=$codecn
 
 
 ffmpeg -i rtmp://localhost:1935/$1/$2 \
