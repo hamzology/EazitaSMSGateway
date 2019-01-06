@@ -15,7 +15,7 @@ resp=$(curl --header "Content-type: application/json" --request POST --data "$OU
 if [ "$resp" == "" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=blank
 else
-    ffmpe="ffmpeg -i rtmp://localhost:1935/$1/$2 \\ ${resp}"
+    ffmpe="ffmpeg -i rtmp://localhost:1935/$1/$2  ${resp}"
     echo $ffmpe > /home/nudewow/c.txt
     eval $ffmpe 
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=${resp}
