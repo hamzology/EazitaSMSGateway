@@ -8,11 +8,11 @@ eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,wi
 codecn=${streams_stream_0_codec_name};
 nbstreams=${format_nb_streams};
 
-if [ "$nbstreams" == "2" ] then
+if [ "$nbstreams" == "2" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
 fi
 
-if [ "$codecn" == "h264" ] then
+if [ "$codecn" == "h264" ]; then
     width=${streams_stream_0_width};
     height=${streams_stream_0_height};
     bitrate=$((${format_bit_rate}/1000));
@@ -21,7 +21,7 @@ else
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?noh=$codecn
 fi
 
-if [ "$startstream" == "yes" ] then
+if [ "$startstream" == "yes" ]; then
     ffmpeg -i rtmp://localhost:1935/$1/$2 \
         -c:a aac -strict -2 -b:a 32k  -c:v libx264 -b:v 128K -f flv rtmp://localhost:1935/hls/$2_low \
         -c:a aac -strict -2 -b:a 64k  -c:v libx264 -b:v 256k -f flv rtmp://localhost:1935/hls/$2_mid \
