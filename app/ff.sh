@@ -10,6 +10,8 @@ nbstreams=${format_nb_streams};
 
 if [ "$nbstreams" == "2" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
+else
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
 fi
 
 if [ "$codecn" == "h264" ]; then
