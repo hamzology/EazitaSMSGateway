@@ -10,12 +10,13 @@ nbstreams=${format_nb_streams};
 
 OUTPUT="$(ffprobe -v quiet -print_format json -show_format -show_streams rtmp://localhost:1935/$1/$2)"
 resp=$(curl --header "Content-type: application/json" --request POST --data "$OUTPUT" http://api.eazita.com/ezsms/parameterssaver.php?encodedata=yes&streamkey=$2);
-ffmpe="ffmpeg -i rtmp://localhost:1935/$1/$2 \\"
+
 
 if [ "$resp" == "" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=blank
 else
-    eval $ffmpe$resp
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=notblank
+    ffmpe="ffmpeg -i rtmp://localhost:1935/$1/$2 \\ ${resp}"
+    eval $ffmpe 
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=${resp}
 fi
 exit 1
