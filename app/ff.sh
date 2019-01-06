@@ -9,33 +9,12 @@ codecn=${streams_stream_0_codec_name};
 nbstreams=${format_nb_streams};
 
 OUTPUT="$(ffprobe -v quiet -print_format json -show_format -show_streams rtmp://localhost:1935/$1/$2)"
-curl  \
---header "Content-type: application/json" \
---request POST \
---data "$OUTPUT" \
- http://api.eazita.com/ezsms/parameterssaver.php?ee=hg;
+resp=$(curl --header "Content-type: application/json" --request POST --data "$OUTPUT" http://api.eazita.com/ezsms/parameterssaver.php?encodedata=yes&streamkey=$2);
 
 
-if [ "$nbstreams" == "2" ]; then
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
+if [ "$resp" == "" ]; then
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=blank
 else
-    startstream='no'
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?xxss=$nbstreams
-    exit 1
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=$resp
 fi
-bitrate=$((${format_bit_rate}/1000));
-
-if [ "${streams_stream_0_codec_name}" == "h264" ]; then
-    width=${streams_stream_0_width};
-    height=${streams_stream_0_height};
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?bitrate=$bitrate
-else
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?noh=$codecn
-fi
-
-if [ "$startstream" == "yesx" ]; then
-    ffmpeg -i rtmp://localhost:1935/$1/$2 \
-        -c:a aac -strict -2 -b:a 32k  -c:v libx264 -b:v 128K -f flv rtmp://localhost:1935/hls/$2_low \
-        -c:a aac -strict -2 -b:a 64k  -c:v libx264 -b:v 256k -f flv rtmp://localhost:1935/hls/$2_mid \
-        -c:a aac -strict -2 -b:a 128k -c:v libx264 -b:v 512K -f flv rtmp://localhost:1935/hls/$2_hi 2> /home/nudewow/ff.txt
-fi
+exit 1
