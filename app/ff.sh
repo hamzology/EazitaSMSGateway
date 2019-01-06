@@ -1,9 +1,7 @@
-on_die ()
-{
-    # kill all children
-    pkill -KILL -P $$
-}
-trap 'on_die' TERM
+#!/bin/bash
+exec 3>&1 4>&2
+trap 'exec 2>&4 1>&3' 0 1 2 3
+exec 1>/home/nudewow/log.out 2>&1
 
 startstream='no'
 eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,width,nb_frames,duration,codec_name rtmp://localhost:1935/$1/$2);
@@ -29,4 +27,3 @@ if [ "$startstream" == "yes" ] then
         -c:a aac -strict -2 -b:a 64k  -c:v libx264 -b:v 256k -f flv rtmp://localhost:1935/hls/$2_mid \
         -c:a aac -strict -2 -b:a 128k -c:v libx264 -b:v 512K -f flv rtmp://localhost:1935/hls/$2_hi 2> /home/nudewow/ff.txt
 fi
-wait
