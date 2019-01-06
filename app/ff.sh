@@ -7,6 +7,19 @@ trap 'on_die' TERM
 
 eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,width,nb_frames,duration,codec_name rtmp://localhost:1935/$1/$2);
 codecn=${streams_stream_0_codec_name};
+nbstreams=${format_nb_streams};
+
+if [ "$nbstreams" == "2" ] then
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
+fi
+
+if [ "$codecn" == "h264" ] then
+    width=${streams_stream_0_width};
+    height=${streams_stream_0_height};
+    bitrate=$((${format_bit_rate}/1000));
+else
+    
+fi
 
 
 curl -i http://api.eazita.com/ezsms/parameterssaver.php?width=$codecn
