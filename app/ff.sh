@@ -8,10 +8,10 @@ eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,wi
 codecn=${streams_stream_0_codec_name};
 nbstreams=${format_nb_streams};
 
-if [ "$nbstreams" == 2 ]; then
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbst=$nbstreams
+if [ "$nbstreams" == "2" ]; then
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
 else
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstms=$nbstreams
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?xxss=$nbstreams
 fi
 
 if [ "$codecn" == "h264" ]; then
