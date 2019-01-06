@@ -8,7 +8,7 @@ eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,wi
 codecn=${streams_stream_0_codec_name};
 nbstreams=${format_nb_streams};
 
-OUTPUT="$(ffprobe -v quiet -print_format json -show_format -show_streams /home/nwow/3078_480p.mp4)"
+OUTPUT="$(ffprobe -v quiet -print_format json -show_format -show_streams rtmp://localhost:1935/$1/$2)"
 curl  \
 --header "Content-type: application/json" \
 --request POST \
