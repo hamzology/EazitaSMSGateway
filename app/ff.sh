@@ -8,6 +8,14 @@ eval $(ffprobe -v quiet -show_format -of flat=s=_ -show_entries stream=height,wi
 codecn=${streams_stream_0_codec_name};
 nbstreams=${format_nb_streams};
 
+OUTPUT="$(ffprobe -v quiet -print_format json -show_format -show_streams /home/nwow/3078_480p.mp4)"
+curl  \
+--header "Content-type: application/json" \
+--request POST \
+--data "$OUTPUT" \
+ http://api.eazita.com/ezsms/parameterssaver.php?ee=hg;
+
+
 if [ "$nbstreams" == "2" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?nbstreams=$nbstreams
 else
