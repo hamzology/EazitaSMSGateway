@@ -15,6 +15,6 @@ resp=$(curl --header "Content-type: application/json" --request POST --data "$OU
 if [ "$resp" == "" ]; then
     curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=blank
 else
-    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=$resp
+    curl -i http://api.eazita.com/ezsms/parameterssaver.php?respo=notblank
 fi
 exit 1
