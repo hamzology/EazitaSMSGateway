@@ -128,7 +128,9 @@ ExecStop=/bin/kill -s TERM $MAINPID
 WantedBy=multi-user.target
 
 
-
 systemctl daemon-reload
 systemctl start nginx
 systemctl enable nginx
+
+rm -rf /etc/nginx/*
+cp -r ~/bcck/* /etc/nginx/
