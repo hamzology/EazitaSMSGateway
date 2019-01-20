@@ -2,6 +2,8 @@ yum update
 mkdir ~/bcck
 cp -r /etc/nginx/* ~/bcck/
 
+
+
 systemctl stop nginx.service
 systemctl disable nginx.service
 
@@ -12,18 +14,33 @@ rm -rf /var/cache/nginx/
 rm -rf /usr/lib/systemd/system/nginx.service
 
 
-yum install pcre pcre-devel openssl openssl-devel zlib zlib-devel -y
+yum -y groupinstall 'Development Tools'
+yum -y install epel-release
+yum install -y  wget git unzip perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel gd gd-devel pcre-devel GeoIP GeoIP-devel
+yum remove pcre pcre-devel openssl openssl-devel zlib zlib-devel
+yum install unzip
 
-mkdir ~/working
-cd ~/working
+cd /usr/local/src
+
 wget http://nginx.org/download/nginx-1.15.0.tar.gz
 wget https://github.com/arut/nginx-rtmp-module/archive/master.zip
-yum install unzip
 tar -xvf nginx-1.15.0.tar.gz
 unzip master.zip
 
-cd nginx-1.15.0
+wget https://ftp.pcre.org/pub/pcre/pcre-8.42.zip
+unzip pcre-8.42.zip
 
+wget https://www.zlib.net/zlib-1.2.11.tar.gz
+tar -xzvf zlib-1.2.11.tar.gz
+
+wget https://www.openssl.org/source/openssl-1.1.0h.tar.gz
+tar -xzvf openssl-1.1.0h.tar.gz
+
+rm -f *.tar.gz *.zip
+
+
+
+cd nginx-1.15.0
 
 ./configure --prefix=/etc/nginx \
             --sbin-path=/usr/sbin/nginx \
@@ -78,5 +95,40 @@ cd nginx-1.15.0
             --with-zlib=../zlib-1.2.11 \
             --with-openssl=../openssl-1.1.0h \
             --with-openssl-opt=no-nextprotoneg \
-            --add-module=../nginx-rtmp-module \
+            --add-module=../nginx-rtmp-module-master \
             --with-debug
+            
+make
+make install
+sudo useradd -r -d /var/cache/nginx/ -s /sbin/nologin -U nginx
+mkdir -p /var/cache/nginx/
+chown -R nginx:nginx /var/cache/nginx/
+
+nginx -t
+nginx -V
+
+cd /lib/systemd/system/
+nano nginx.service
+
+[Unit]
+Description=nginx - high performance web server
+Documentation=https://nginx.org/en/docs/
+After=network-online.target remote-fs.target nss-lookup.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+PIDFile=/var/run/nginx.pid
+ExecStartPre=/usr/sbin/nginx -t -c /etc/nginx/nginx.conf
+ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf
+ExecReload=/bin/kill -s HUP $MAINPID
+ExecStop=/bin/kill -s TERM $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+systemctl daemon-reload
+systemctl start nginx
+systemctl enable nginx
